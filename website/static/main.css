@@ -1,0 +1,31 @@
+.purple {
+    background-color: #c540fa;
+    border-color: #c540fa;
+    color: white;
+}
+
+.purple:hover {
+    background-color: #a61cdd;
+    border-color: #a61cdd;
+}
+
+.purple-nav {
+    background-color: #c540fa;
+    border-color: #c540fa;
+    color: white;
+}
+
+.purple-outline {
+    border-color: #c540fa;
+    color: black;
+}
+
+.purple-outline:hover {
+    background-color: #a61cdd;
+    border-color: #a61cdd;
+    color: white;
+}
+
+.btn-float {
+    float: right;
+}

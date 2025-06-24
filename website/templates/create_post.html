@@ -1,0 +1,22 @@
+<!-- page extends to template.html -->
+{% extends "template.html" %} {% block title %} Create Post {% endblock %}
+<!-- post page content -->
+{% block content %}
+<h1>Make a blog post</h1> 
+
+<form method="POST">
+    <!-- blog title form -->
+    <label for="username">Post Title</label>
+    <input type="text" id="title" name="title" class="form-control" placeholder="Blog Title">
+    <br/>
+    <!-- blog content text area -->
+    <label for="username">Post Content</label>
+    <textarea name="content" id="content" class="form-control"></textarea>
+<br/>
+    <!-- submit button -->
+    <div align="center">
+        <button class="btn btn-primary purple" type="submit">Post</button>
+    </div>
+</form>
+
+{% endblock %}
