@@ -23,7 +23,7 @@
                 <!-- start of the delete dropdown menu -->
                 {% if user.id == post.author %}
                 <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle purple" data-bs-toggle="dropdown"></button>
+                    <button type="button" class="btn btn-sm btn-primary dropdown-toggle red" data-bs-toggle="dropdown"></button>
                     <ul class="dropdown-menu">
                         <li>
                             <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
@@ -60,7 +60,7 @@
                             <small class="text-muted">{{comment.date_created}}</small>
                             {% if user.id == comment.author or user.id == post.author %}
                             <div class="btn-group">
-                                <button type="button" class="btn btn-small btn-primary dropdown-toggle purple" data-bs-toggle="dropdown"></button>
+                                <button type="button" class="btn btn-small btn-primary dropdown-toggle red" data-bs-toggle="dropdown"></button>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a href="/delete-comment/{{comment.id}}" class="dropdown-item">Delete</a>
@@ -102,9 +102,9 @@
 {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
 {% if page_num %}
 {% if posts.page == page_num %}
-<a class="btn btn-info mb-4 purple" href="{{ url_for('views.blog', page=page_num)}}">{{ page_num }}</a>
+<a class="btn btn-info mb-4 red" href="{{ url_for('views.blog', page=page_num)}}">{{ page_num }}</a>
 {% else %}
-<a class="btn btn-outline-info mb-4 purple-outline" href="{{ url_for('views.blog', page=page_num)}}">{{ page_num }}</a>
+<a class="btn btn-outline-info mb-4 red-outline" href="{{ url_for('views.blog', page=page_num)}}">{{ page_num }}</a>
 {% endif %}
 {% else %}
 ...
@@ -114,7 +114,7 @@
 {% block footer %}
 <div align="center">
     <a href="/create-post">
-        <button type="button" class="btn btn-primary btn-large purple">
+        <button type="button" class="btn btn-primary btn-large red">
             Create Post
         </button>
     </a>

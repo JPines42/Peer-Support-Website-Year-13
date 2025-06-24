@@ -1,28 +1,28 @@
-.purple {
-    background-color: #c540fa;
-    border-color: #c540fa;
+.red {
+    background-color: #DB2955;
+    border-color: #DB2955;
     color: white;
 }
 
-.purple:hover {
-    background-color: #a61cdd;
-    border-color: #a61cdd;
+.red:hover {
+    background-color: #AC042E;
+    border-color: #AC042E;
 }
 
-.purple-nav {
-    background-color: #c540fa;
-    border-color: #c540fa;
+.red-nav {
+    background-color: #DB2955;
+    border-color: #DB2955;
     color: white;
 }
 
-.purple-outline {
-    border-color: #c540fa;
+.red-outline {
+    border-color: #DB2955;
     color: black;
 }
 
-.purple-outline:hover {
-    background-color: #a61cdd;
-    border-color: #a61cdd;
+.red-outline:hover {
+    background-color: #AC042E;
+    border-color: #AC042E;
     color: white;
 }
 
