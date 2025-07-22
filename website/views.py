@@ -82,7 +82,7 @@ def update_post(id):
         post.content = form.content.data
         db.session.commit()
         flash('Post updated!', category='success')
-        page = request.args.get('page', 1, type=int)
+        page = request.args.get('page', 1, type=int)    
         posts = Post.query.order_by(Post.date_created.desc()).paginate(page=page, per_page=4)
         return render_template("blog.html", user=current_user, posts=posts)
     elif request.method == 'GET':

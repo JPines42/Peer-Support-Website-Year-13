@@ -26,10 +26,10 @@
                     <button type="button" class="btn btn-sm btn-primary dropdown-toggle red" data-bs-toggle="dropdown"></button>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
+                            <a href="/update-post/{{post.id}}" class="dropdown-item">Update</a>
                         </li>
                         <li>
-                            <a href="/update-post/{{post.id}}" class="dropdown-item">Update</a>
+                            <a href="/delete-post/{{post.id}}" class="dropdown-item">Delete</a>
                         </li>
                     </ul>
                 </div>
@@ -90,7 +90,7 @@
         <!-- comment input form-->
         <form class="input-group mb-3" method="POST" action="/create-comment/{{post.id}}">
             <input type="text" id="text" name="text" class="form-control" placeholder="Comment something!"/>
-            <button typw="submit" class="btn btn-primary purple">Comment</button>
+            <button type="submit" class="btn btn-primary red">Comment</button>
         </form>
         <!-- end of comment code -->
         <div class="card-footer text-muted">{{post.date_created}}</div>

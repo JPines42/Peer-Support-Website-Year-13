@@ -1,37 +1,89 @@
-<!-- page extends to template.html -->
-{% extends "template.html" %} {% block title %} Signup {% endblock %}
-<!-- sign-up page content -->
+{% extends "template.html" %}
+{% block title %} Sign Up • Peer Support SMC {% endblock %}
 {% block content %}
-<!-- start of form -->
-<form method="POST">
-    <h1>Signup</h1>
 
-    <div class="form-group">
-        <!-- email form -->
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
-        <br/>
-        <!-- username form -->
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" class="form-control" placeholder="Enter Username">
-        <br/>
-        <!-- password1 form -->
-        <label for="password1">Password</label>
-        <input type="password" id="password1" name="password1" class="form-control" placeholder="Enter Password">
-        <div id="passwordHelpBlock" class="form-text">
-            Your password must be 8-20 characters long.
-        </div>
-        <br/>
-        <!-- password2 form -->
-        <label for="password2">Password</label>
-        <input type="password" id="password2" name="password2" class="form-control" placeholder="Confirm Password">
-        <br/>
-        <!-- submit button -->
-        <div align="center">
-            <button class="btn btn-primary red" type="submit">Sign Up</button>
+<!--Heading-->
+<section>
+    <div class="container px-4 px-lg-5 h-100 navspace">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-dark font-weight-bold headingsfont">Sign Up</h1>
+                <hr class="divider" />
+            </div>
         </div>
     </div>
+</section>
 
-</form>
+<!--Sign up input boxes-->
+<section class="container">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
 
+            <div class="form-group">
+                {{ form.username.label(class="headingsfont form-control-label") }} <!--Username input box-->
+
+                {% if form.username.errors %} <!--Username is invalid-->
+                {{ form.username(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.username(class="form-control noteborder", placeholder="Enter username (Must be greater than 1 character)") }} <!--Username passes validation-->
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label(class="headingsfont form-control-label") }} <!--Email input box-->
+
+                {% if form.email.errors %} <!--Email is invalid-->
+                {{ form.email(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.email(class="form-control noteborder", placeholder="Enter email") }} <!--Email passes validation-->
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.password.label(class="headingsfont form-control-label") }} <!--Password input box-->
+
+                {% if form.password.errors %} <!--Password is invalid-->
+                {{ form.password(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.password(class="form-control noteborder", placeholder="Enter password (Must be greater than 7 characters)") }} <!--Password passes validation-->
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.confirm_password.label(class="headingsfont form-control-label") }} <!--Confirm Password input box-->
+
+                {% if form.confirm_password.errors %} <!--Confirm Password is invalid-->
+                {{ form.confirm_password(class="form-control is-invalid") }}
+                <div class="invalid-feedback">
+                    {% for error in form.confirm_password.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }} <!--Confirmed password passes validation-->
+                {% endif %}
+            </div>
+        </fieldset>
+        <div  class="form-group buttoncenter">
+            {{ form.submit(class="btn btn-primary btn-lg buttoncolour headingsfont") }} <!--Submit button-->
+        </div>
+    </form>
+
+</section>
 {% endblock %}
