@@ -1,8 +1,17 @@
 <!-- page extends to template.html -->
-{% extends "template.html" %} {% block title %} Create Post {% endblock %}
+{% extends "template.html" %} {% block title %} Create Post • Peer Support SMC {% endblock %}
 <!-- post page content -->
 {% block content %}
-<h1>Make a blog post</h1> 
+<section>
+    <div class="container px-4 px-lg-5 h-100 navspace">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-dark font-weight-bold headingsfont">Make a Blog Post</h1>
+                <hr class="divider" />
+            </div>
+        </div>
+    </div>
+</section>
 
 <form method="POST">
     <!-- blog title form -->
