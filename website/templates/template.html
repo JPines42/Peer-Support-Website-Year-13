@@ -58,7 +58,17 @@
         {% endif %} {% endfor %} {% endif %} {% endwith %}
 
         <!-- import content from other html files -->
-        <div class="container">{% block content %} {% endblock %}</div>
+          <div class="flexit">
+            {% block content %}
+            {% endblock %}
+          </div>
+
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 text-white-50 navcolour">
+            <div class="container text-center">
+              <small>Copyright <span>&copy;</span> Jeff Pinera | SMC Peer Support</small>
+            </div>
+        </footer>
+
         <!-- import popper and javascript-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>

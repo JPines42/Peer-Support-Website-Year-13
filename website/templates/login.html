@@ -1,26 +1,46 @@
-<!-- page extends to template.html -->
-{% extends "template.html" %} {% block title %} Login {% endblock %}
-<!-- login page content -->
+{% extends "template.html" %}
+{% block title %} Login • Peer Support SMC {% endblock %}
 {% block content %}
-<!-- start of form -->
-<form method="POST">
-    <h1>Login</h1>
+<!--
+TEST USER
+Email: test@blog.com
+Password: 12345678
+-->
 
-    <div class="form-group">
-        <!-- email form -->
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email">
-        <br/>
-        <!-- password form -->
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password">
-        <br/>
-        <!-- submit button -->
-        <div align="center">
-            <button class="btn btn-primary red" type="submit">Login</button>
+<!--Heading-->
+<section>
+    <div class="container px-4 px-lg-5 h-100 navspace">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-dark font-weight-bold headingsfont">Login</h1>
+                <hr class="divider" />
+            </div>
         </div>
     </div>
-</form>
+</section>
 
+<!--Login input boxes-->
+<section class="container">
+    <form method="POST">
+        <div class="form-group">
+            <label for="email" class="headingsfont">Email Address</label> <!--Email adress input box-->
+            <input type="email" class="form-control noteborder" id="email" name="email" placeholder="Enter email" />
+        </div>
 
+        <div class="spacer"></div>
+
+        <div class="form-group">
+            <label for="password" class="headingsfont">Password</label> <!--Password input box-->
+            <input type="password" class="form-control noteborder" id="password" name="password"
+                placeholder="Enter password" />
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="buttoncenter">
+            <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Login</button> <!--Submit button-->
+        </div>
+
+    </form>
+</section>
 {% endblock %}
