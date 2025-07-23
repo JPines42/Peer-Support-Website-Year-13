@@ -11,42 +11,36 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
         <script src="https://kit.fontawesome.com/999ca2bb93.js" crossorigin="anonymous"></script>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-    rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- navbar -->
-        <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar red-nav">
+        <nav class="navbar navbar-expand-lg navbar-dark red-nav">
               <a class="navbar-brand" href="/home">
-      <img class="d-inline-block align-top" width="35px" height="35px" src="static/assets/img/heartlogowhite.png"
+      <img class="d-inline-block align-top" width="35px" height="35px" src=""
         alt="..."></a>
             <div class="container-fluid">
               <a class="navbar-brand" href="#"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon burger"></span>
+                <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <a class="nav-link headingsfont red-nav" aria-current="page" href="/home">Home</a>
-                  <a class="nav-link headingsfont red-nav" href="/singdanceoff">Sing & Dance Off</a>
-                  <a class="nav-link headingsfont red-nav" href="/leaders">Meet the Leaders</a>
-                  <a class="nav-link headingsfont red-nav" href="/faq">FAQ</a>
+                  <a class="nav-link" aria-current="page" href="/home">Home</a>
+                  <a class="nav-link headingsfont" href="/singdanceoff">Sing & Dance Off</a>
+                  <a class="nav-link headingsfont" href="/leaders">Meet the Leaders</a>
+                  <a class="nav-link headingsfont" href="/faq">FAQ</a>
                 </div>
                   {% if user.is_authenticated %}
-                  <div class="navbar-nav">
-                    <a class="nav-link headingsfont red-nav" href="/blog">Planning Board</a>
+                  <div class="navbar-nav"> <!-- ms-auto -->
+                    <a class="nav-link" href="/blog">Planning Board</a>
                   </div>
                   <div class="navbar-nav ms-auto">
-                    <a class="nav-link headingsfont red-nav" href="/logout">Logout</a>
+                    <a class="nav-link" href="/logout">Logout</a>
                   </div>  
                   {% else %}
                   <div class="navbar-nav ms-auto">
-                    <a class="nav-link headingsfont red-nav" href="/sign-up">Signup</a>
-                    <a class="nav-link headingsfont red-nav" href="/login">Login</a>
+                    <a class="nav-link" href="/sign-up">Signup</a>
+                    <a class="nav-link" href="/login">Login</a>
                   </div>
                   {% endif %}
                 </div>
@@ -55,25 +49,24 @@
           </nav>
 
         <!--Flashes-->
-        <div id="flash-container">
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
         {% for category, message in messages %} {% if category =='error' %}
-        <div class="alert alert-danger alert-dismissable fade show flashspace" role="alert">
+        <div class="alert alert-danger alert-dismissable fade show" role="alert">
           {{ message }}
           <button type="button" class="btn-close btn-float" data-bs-dismiss="alert">
           </button>
         </div>
         {% else %}
-        <div class="alert alert-success alert-dismissable fade show flashspace" role="success">
+        <div class="alert alert-success alert-dismissable fade show" role="success">
           {{ message }}
           <button type="button" class="btn-close btn-float" data-bs-dismiss="alert">
           </button>
         </div>
         {% endif %} {% endfor %} {% endif %} {% endwith %}
-      </div>
+
         <!-- import content from other html files -->
-          <div>
+          <div class="flexit">
             {% block content %}
             {% endblock %}
           </div>
