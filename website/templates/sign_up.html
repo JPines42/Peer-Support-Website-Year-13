@@ -31,12 +31,14 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.username(class="form-control noteborder", placeholder="Enter username") }} <!--Username passes validation-->
+                {{ form.username(class="form-control textbox-border", placeholder="Enter username") }} <!--Username passes validation-->
                 <div id="usernameHelpBlock" class="form-text">
             Your username must be greater than 1 character long.
         </div>
                 {% endif %}
             </div>
+
+<div class="spacer"></div>
 
             <div class="form-group">
                 {{ form.email.label(class="headingsfont form-control-label") }} <!--Email input box-->
@@ -49,9 +51,11 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.email(class="form-control noteborder", placeholder="Enter email") }} <!--Email passes validation-->
+                {{ form.email(class="form-control textbox-border", placeholder="Enter email") }} <!--Email passes validation-->
                 {% endif %}
             </div>
+
+<div class="spacer"></div>
 
             <div class="form-group">
                 {{ form.password.label(class="headingsfont form-control-label") }} <!--Password input box-->
@@ -64,12 +68,14 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.password(class="form-control noteborder", placeholder="Enter password") }} <!--Password passes validation-->
+                {{ form.password(class="form-control textbox-border", placeholder="Enter password") }} <!--Password passes validation-->
                 <div id="passwordHelpBlock" class="form-text">
             Your password must be 8-20 characters long.
         </div>
                 {% endif %}
             </div>
+
+<div class="spacer"></div>
 
             <div class="form-group">
                 {{ form.confirm_password.label(class="headingsfont form-control-label") }} <!--Confirm Password input box-->
@@ -82,12 +88,15 @@
                     {% endfor %}
                 </div>
                 {% else %}
-                {{ form.confirm_password(class="form-control noteborder", placeholder="Re-enter password") }} <!--Confirmed password passes validation-->
+                {{ form.confirm_password(class="form-control textbox-border", placeholder="Re-enter password") }} <!--Confirmed password passes validation-->
                 {% endif %}
             </div>
         </fieldset>
-        <div  class="form-group buttoncenter">
-            {{ form.submit(class="btn btn-primary btn-lg buttoncolour headingsfont") }} <!--Submit button-->
+
+        <div class="spacer"></div>
+
+        <div  class="form-group" align="center">
+            {{ form.submit(class="btn btn-primary btn-lg red") }} <!--Submit button-->
         </div>
     </form>
 

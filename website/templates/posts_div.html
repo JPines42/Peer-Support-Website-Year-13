@@ -8,7 +8,7 @@
     <div class="container px-4 px-lg-5 h-100 navspace">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-end">
-                <h1 class="text-dark font-weight-bold headingsfont">{{username}} Plan Posts</h1>
+                <h1 class="text-dark font-weight-bold headingsfont">{{username}} Plan Board</h1>
                 <hr class="divider" />
             </div>
         </div>
@@ -17,7 +17,7 @@
 
 <div id="posts" class="container">
     {% for post in posts %}
-    <div class="card border-dark">
+    <div class="card textbox-border">
         <div class="card-header d-flex justify-content-between align-items-center">
             <a href="/posts/{{post.user.username}}">{{post.user.username}}</a>
             <!-- start of likes section -->
@@ -127,7 +127,7 @@
 {% block footer %}
 <div align="center">
     <a href="/create-post">
-        <button type="button" class="btn btn-primary btn-large red">
+        <button type="button" class="btn btn-primary btn-lg red">
             Create Post
         </button>
     </a>

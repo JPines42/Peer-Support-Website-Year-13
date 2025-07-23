@@ -4,19 +4,19 @@
 {% block content %} 
 <!--Heading-->
 <section>
-    <div class="homeheader">
+    <div class="home-header">
         <img width="100px" height="100px" class="mx-auto d-block" src="static/assets/img/heartlogored.png">
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8 align-self-end">
-                    <h1 class="font-weight-bold titlefont">Peer Support</h1>
+                    <h1 class="title-font">Peer Support</h1>
                     {% if user.is_authenticated %}
-                    <h3 class="font-weight-bold headingsfont headerpcolour">Welcome, {{ user.username }}</h3>
+                    <h3 class="headingsfont home-p-colour">Welcome, {{ user.username }}</h3>
                     {% endif %}
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5 headerpcolour">Subheading</p>
+                    <p class="text-white-75 mb-5 home-p-colour">Subheading</p>
                 </div>
             </div>
         </div>
@@ -26,14 +26,14 @@
 <div class="spacer"></div>
 
 <!--Main Paragraph-->
-<section class="page-section headercolour container">
+<section class="page-section home-block container">
     <div class="spacer"></div>
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-lg-8 text-center">
                 <h2 class="text-white mt-0 headingsfont">Heading 1</h2>
                 <hr class="divider divider-light" />
-                <p class="text-white-75 mb-4 headerpcolour">Description 1</p>
+                <p class="text-white-75 mb-4 home-p-colour">Description 1</p>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
     <hr class="divider" />
     <div class="row">
         <div class="col-lg-4">
-            <div class="homeimgcircle"> <!--Bubble 1-->
+            <div class="home-img-circle"> <!--Bubble 1-->
                 <img class="mx-auto rounded-circle" src="static/assets/img/picture2.jpg" alt="..." height="400px"
                     width="400px" />
                 <h4>Subheading 1</h4>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="homeimgcircle"> <!--Bubble 2-->
+            <div class="home-img-circle"> <!--Bubble 2-->
                 <img class="mx-auto rounded-circle" src="static/assets/img/picture6.jpg" alt="..." height="400px"
                     width="400px" />
                 <h4>Subheading 2</h4>
@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="homeimgcircle"> <!--Bubble 3-->
+            <div class="home-img-circle"> <!--Bubble 3-->
                 <img class="mx-auto rounded-circle" src="static/assets/img/picture4.jpg" alt="..." height="400px"
                     width="400px" />
                 <h4>Subheading 3</h4>

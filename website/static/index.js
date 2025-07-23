@@ -13,3 +13,10 @@ function like(postId) {
     })
     .catch((e) => alert("Could not like post."));
     }
+
+    setTimeout(() => {
+    const alert = document.querySelector('.alert');
+    if (alert) {
+      alert.classList.remove('show'); // Triggers fade-out
+    }
+  }, 7000);
