@@ -203,3 +203,8 @@ def like(post_id):
         db.session.commit()
 
     return jsonify({"likes": len(post.likes), "liked": current_user.id in map(lambda x: x.author, post.likes)})
+
+@views.route("/calendar")  # When URL is '/calendar'
+def calendar():
+    # Return to Calendar page
+    return render_template("calendar.html", user=current_user)

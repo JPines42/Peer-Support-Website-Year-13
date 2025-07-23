@@ -33,15 +33,17 @@
                   <a class="nav-link headings-font" href="/faq">FAQ</a>
                 </div>
                   {% if user.is_authenticated %}
-                  <div class="navbar-nav"> <!-- ms-auto -->
+                  <a class="nav-link headings-font nav-splitter">|</a>
+                  <div class="navbar-nav">
                     <a class="nav-link headings-font" href="/blog">Planning Board</a>
+                    <a class="nav-link headings-font" href="/calendar">Calendar</a>
                   </div>
                   <div class="navbar-nav ms-auto">
                     <a class="nav-link headings-font" href="/logout">Logout</a>
                   </div>  
                   {% else %}
                   <div class="navbar-nav ms-auto">
-                    <a class="nav-link headings-font" href="/sign-up">Signup</a>
+                    <a class="nav-link headings-font" href="/sign-up">Sign Up</a>
                     <a class="nav-link headings-font" href="/login">Login</a>
                   </div>
                   {% endif %}
