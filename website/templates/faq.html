@@ -1,0 +1,42 @@
+{% extends "template.html" %}
+{% block title %} FAQ • Peer Support SMC{% endblock %}
+{% block content %}
+
+<!--Heading-->
+<section>
+  <div class="container px-4 px-lg-5 h-100 navspace">
+    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+      <div class="col-lg-8 align-self-end">
+        <h1 class="text-dark font-weight-bold headingsfont">FAQ</h1>
+        <hr class="divider" />
+        <p class="text-white-75 mb-5"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Contact Us input boxes-->
+<section class="container">
+  <h2 class="text-center mt-0 headingsfont">Contact Us</h2>
+  <hr class="divider" />
+
+  <div>
+    <form method="POST">
+      <div class="form-group">
+        <label for="email" class="headingsfont">Email Address</label> <!--Email address input box-->
+        <input type="email" class="form-control noteborder" id="email" name="email" placeholder="Enter email" />
+      </div>
+
+      <label for="faq" class="headingsfont">Message</label> <!--Message input box-->
+      <textarea name="faq" id="faq" class="form-control noteborder" placeholder="Enter message here"></textarea>
+
+      <div class="spacer"></div>
+
+      <div align="center">
+        <button type="submit" class="btn btn-primary btn-lg buttoncolour headingsfont">Submit Message</button> <!--Sumbit button-->
+      </div>
+    </form>
+</section>
+<div class="spacer"></div>
+
+{% endblock %}

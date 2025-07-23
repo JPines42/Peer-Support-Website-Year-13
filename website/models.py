@@ -40,3 +40,10 @@ class Like(db.Model):
     author = db.Column(db.Integer, db.ForeignKey('user.id', ondelete="CASCADE"), nullable=False)
     post_id= db.Column(db.Integer, db.ForeignKey('post.id', ondelete="CASCADE"), nullable=False)
 
+class Faq(db.Model):
+    id = db.Column(db.Integer, primary_key=True)  # Database ID number
+    email = db.Column(db.String(150))  # Email
+    data = db.Column(db.String(10000))  # Inputted data
+    date = db.Column(db.DateTime(timezone=True),
+                     default=func.now())  # Date of submit
+

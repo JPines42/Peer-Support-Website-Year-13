@@ -5,7 +5,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 # import database
 from . import db
 # import from .models user
-from .models import User, Post, Comment, Like
+from .models import User, Post, Comment, Like, Faq
 # import from .forms
 from .forms import PostForm
 
@@ -19,6 +19,48 @@ views = Blueprint("views", __name__)
 # returns home.html
 def home():
     return render_template("home.html", user=current_user)
+
+# Sing and Dance page route
+
+
+@views.route("/singdanceoff")  # When URL is '/singdanceoff'
+def singdanceoff():
+    # Return to Sing and Dance page
+    return render_template("singdanceoff.html", user=current_user)
+
+# Meet the Leaders page route
+
+
+@views.route("/leaders")  # When URL is '/leaders'
+def leaders():
+    # Return to Meet the Leaders page
+    return render_template("leaders.html", user=current_user)
+
+# FAQ page route
+
+
+# When URL is '/faq' and allowance for data submittion
+@views.route("/faq", methods=['GET', 'POST'])
+def faq():
+    if request.method == 'POST':
+        faq = request.form.get('faq')
+        email = request.form.get('email')
+        if len(email) < 1:
+            # Flash error if email is less than 1 character
+            flash('Email is invalid!', category='error')
+        else:
+            if len(faq) < 1:
+                # Flash error if message is less than 1 character
+                flash('Message is too short!', category='error')
+            else:
+                new_faq = Faq(data=faq, email=email)
+                db.session.add(new_faq)
+                db.session.commit()
+                # Flash success if message is submitted
+                flash('Message submitted!', category='success')
+
+    return render_template("faq.html", user=current_user)  # Return to FAQ page
+
 
 # blog page route
 @views.route("/blog")
