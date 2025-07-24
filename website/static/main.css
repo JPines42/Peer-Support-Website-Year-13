@@ -146,8 +146,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    border-color: #DB2955;
-    border-width: 10px;
+    border: 0.3rem solid #DB2955;
     border-radius: 10px;
 }
 
@@ -155,3 +154,67 @@ footer {
     height: 1.5rem;
     width: 1.5rem;
 }
+
+        .calendar-container {
+            border-radius: 15px;
+            border-color: #DB2955;
+            max-width: 600px;
+            width: 100%;
+            border: 0.3rem solid #DB2955;
+            background-color: white;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+        }
+        .calendar-header h2 {
+            font-weight: 700;
+            color: #343a40;
+            margin: 0;
+        }
+        .calendar-header .btn {
+            background-color: #DB2955;
+            border-color: #DB2955;
+            color: white;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .calendar-header .btn:hover {
+            background-color: #AC042E;
+            border-color: #AC042E;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+            text-align: center;
+            padding-bottom: 0.25rem;
+        }
+        .calendar-grid .day-name {
+            font-weight: 600;
+            color: #6c757d;
+            padding: 0.75rem 0;
+        }
+        .calendar-grid .day-cell {
+            padding: 0.75rem 0;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+            cursor: pointer;
+            color: #495057;
+        }
+        .calendar-grid .day-cell:hover:not(.empty):not(.today) {
+            background-color: #e9ecef;
+        }
+        .calendar-grid .empty {
+            background-color: transparent;
+            cursor: default;
+        }
+        .calendar-grid .today {
+            background-color: #DB2955;
+            color: white;
+            font-weight: 700; 
+        }
