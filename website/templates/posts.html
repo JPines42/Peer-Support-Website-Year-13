@@ -1,13 +1,9 @@
 <!-- page extends to post_div.html -->
-{% extends "posts_div.html" %} {% block title %} {{username}}'s Board • Peer Support SMC {% endblock %} 
-{% block header %}
-{{username}}'s Board 
-{% endblock %}
-{% block footer %}
+{% extends "posts_div.html" %} {% block title %} {{username}}'s Board • Peer Support SMC {% endblock %} {% block header %} {{username}}'s Board {% endblock %} {% block footer %}
 <div align="center">
-    <a href="/blog">
-        <button type="button" class="btn btn-primary btn-lg red">Back</button>
-    </a>
+  <a href="/blog">
+    <button type="button" class="btn btn-primary btn-lg red">Back</button>
+  </a>
 </div>
 
 <div class="spacer"></div>

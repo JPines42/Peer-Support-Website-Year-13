@@ -1,6 +1,5 @@
-{% extends "template.html" %}
-{% block title %} Login • Peer Support SMC {% endblock %}
-{% block content %}
+{% extends "template.html" %} {% block title %} Login • Peer Support SMC {%
+endblock %} {% block content %}
 <!--
 TEST USER
 Email: test@blog.com
@@ -9,38 +8,53 @@ Password: 12345678
 
 <!--Heading-->
 <section>
-    <div class="container px-4 px-lg-5 h-100 navspace">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end">
-                <h1 class="text-dark headings-font">Login</h1>
-                <hr class="divider" />
-            </div>
-        </div>
+  <div class="container px-4 px-lg-5 h-100 navspace">
+    <div
+      class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center"
+    >
+      <div class="col-lg-8 align-self-end">
+        <h1 class="text-dark headings-font">Login</h1>
+        <hr class="divider" />
+      </div>
     </div>
+  </div>
 </section>
 
 <!--Login input boxes-->
 <section class="container">
-    <form method="POST">
-        <div class="form-group">
-            <label for="email" class="headings-font">Email Address</label> <!--Email adress input box-->
-            <input type="email" class="form-control textbox-border" id="email" name="email" placeholder="Enter email" />
-        </div>
+  <form method="POST">
+    <div class="form-group">
+      <label for="email" class="headings-font">Email Address</label>
+      <!--Email adress input box-->
+      <input
+        type="email"
+        class="form-control textbox-border"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+    </div>
 
-        <div class="spacer"></div>
+    <div class="spacer"></div>
 
-        <div class="form-group">
-            <label for="password" class="headings-font">Password</label> <!--Password input box-->
-            <input type="password" class="form-control textbox-border" id="password" name="password"
-                placeholder="Enter password" />
-        </div>
+    <div class="form-group">
+      <label for="password" class="headings-font">Password</label>
+      <!--Password input box-->
+      <input
+        type="password"
+        class="form-control textbox-border"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+      />
+    </div>
 
-        <div class="spacer"></div>
+    <div class="spacer"></div>
 
-        <div align="center">
-            <button type="submit" class="btn btn-primary btn-lg red">Login</button> <!--Submit button-->
-        </div>
-
-    </form>
+    <div align="center">
+      <button type="submit" class="btn btn-primary btn-lg red">Login</button>
+      <!--Submit button-->
+    </div>
+  </form>
 </section>
 {% endblock %}

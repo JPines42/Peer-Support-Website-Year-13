@@ -1,33 +1,43 @@
 <!-- page extends to template.html -->
 {% extends "template.html" %} {% block title %} Create Post • Peer Support SMC {% endblock %}
+
 <!-- post page content -->
 {% block content %}
+<!--Heading-->
 <section>
-    <div class="container px-4 px-lg-5 h-100 navspace">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end">
-                <h1 class="text-dark headings-font">Make a Board Post</h1>
-                <hr class="divider" />
-            </div>
-        </div>
+  <div class="container px-4 px-lg-5 h-100 navspace">
+    <div
+      class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center"
+    >
+      <div class="col-lg-8 align-self-end">
+        <h1 class="text-dark headings-font">Make a Board Post</h1>
+        <hr class="divider" />
+      </div>
     </div>
+  </div>
 </section>
 
 <div class="container">
-<form method="POST">
+  <form method="POST">
     <!-- blog title form -->
     <label for="username">Post Title</label>
-    <input type="text" id="title" name="title" class="form-control" placeholder="Blog Title">
-    <br/>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      class="form-control"
+      placeholder="Blog Title"
+    />
+    <br />
     <!-- blog content text area -->
     <label for="username">Post Content</label>
     <textarea name="content" id="content" class="form-control"></textarea>
-<br/>
+    <br />
     <!-- submit button -->
     <div align="center">
-        <button class="btn btn-primary btn-lg red" type="submit">Post</button>
+      <button class="btn btn-primary btn-lg red" type="submit">Post</button>
     </div>
-</form>
+  </form>
 </div>
 
 {% endblock %}

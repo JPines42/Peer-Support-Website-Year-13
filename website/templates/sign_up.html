@@ -1,104 +1,118 @@
-{% extends "template.html" %}
-{% block title %} Sign Up • Peer Support SMC {% endblock %}
-{% block content %}
+{% extends "template.html" %} {% block title %} Sign Up • Peer Support SMC {% endblock %} {% block content %}
 
 <!--Heading-->
 <section>
-    <div class="container px-4 px-lg-5 h-100 navspace">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-8 align-self-end">
-                <h1 class="text-dark headings-font">Sign Up</h1>
-                <hr class="divider" />
-            </div>
-        </div>
+  <div class="container px-4 px-lg-5 h-100 navspace">
+    <div
+      class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center"
+    >
+      <div class="col-lg-8 align-self-end">
+        <h1 class="text-dark headings-font">Sign Up</h1>
+        <hr class="divider" />
+      </div>
     </div>
+  </div>
 </section>
 
 <!--Sign up input boxes-->
 <section class="container">
-    <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        <fieldset class="form-group">
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+      <div class="form-group">
+        {{ form.username.label(class="headings-font form-control-label") }}
+        <!--Username input box-->
 
-            <div class="form-group">
-                {{ form.username.label(class="headings-font form-control-label") }} <!--Username input box-->
-
-                {% if form.username.errors %} <!--Username is invalid-->
-                {{ form.username(class="form-control is-invalid") }}
-                <div class="invalid-feedback">
-                    {% for error in form.username.errors %}
-                    <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-                {% else %}
-                {{ form.username(class="form-control textbox-border", placeholder="Enter username") }} <!--Username passes validation-->
-                <div id="usernameHelpBlock" class="form-text">
-            Your username must be greater than 1 character long.
+        {% if form.username.errors %}
+        <!--Username is invalid-->
+        {{ form.username(class="form-control is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.username.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
         </div>
-                {% endif %}
-            </div>
-
-<div class="spacer"></div>
-
-            <div class="form-group">
-                {{ form.email.label(class="headings-font form-control-label") }} <!--Email input box-->
-
-                {% if form.email.errors %} <!--Email is invalid-->
-                {{ form.email(class="form-control is-invalid") }}
-                <div class="invalid-feedback">
-                    {% for error in form.email.errors %}
-                    <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-                {% else %}
-                {{ form.email(class="form-control textbox-border", placeholder="Enter email") }} <!--Email passes validation-->
-                {% endif %}
-            </div>
-
-<div class="spacer"></div>
-
-            <div class="form-group">
-                {{ form.password.label(class="headings-font form-control-label") }} <!--Password input box-->
-
-                {% if form.password.errors %} <!--Password is invalid-->
-                {{ form.password(class="form-control is-invalid") }}
-                <div class="invalid-feedback">
-                    {% for error in form.password.errors %}
-                    <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-                {% else %}
-                {{ form.password(class="form-control textbox-border", placeholder="Enter password") }} <!--Password passes validation-->
-                <div id="passwordHelpBlock" class="form-text">
-            Your password must be 8-20 characters long.
+        {% else %} {{ form.username(class="form-control textbox-border",
+        placeholder="Enter username") }}
+        <!--Username passes validation-->
+        <div id="usernameHelpBlock" class="form-text">
+          Your username must be greater than 1 character long.
         </div>
-                {% endif %}
-            </div>
+        {% endif %}
+      </div>
 
-<div class="spacer"></div>
+      <div class="spacer"></div>
 
-            <div class="form-group">
-                {{ form.confirm_password.label(class="headings-font form-control-label") }} <!--Confirm Password input box-->
+      <div class="form-group">
+        {{ form.email.label(class="headings-font form-control-label") }}
+        <!--Email input box-->
 
-                {% if form.confirm_password.errors %} <!--Confirm Password is invalid-->
-                {{ form.confirm_password(class="form-control is-invalid") }}
-                <div class="invalid-feedback">
-                    {% for error in form.confirm_password.errors %}
-                    <span>{{ error }}</span>
-                    {% endfor %}
-                </div>
-                {% else %}
-                {{ form.confirm_password(class="form-control textbox-border", placeholder="Re-enter password") }} <!--Confirmed password passes validation-->
-                {% endif %}
-            </div>
-        </fieldset>
-
-        <div class="spacer"></div>
-
-        <div  class="form-group" align="center">
-            {{ form.submit(class="btn btn-primary btn-lg red") }} <!--Submit button-->
+        {% if form.email.errors %}
+        <!--Email is invalid-->
+        {{ form.email(class="form-control is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.email.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
         </div>
-    </form>
+        {% else %} {{ form.email(class="form-control textbox-border",
+        placeholder="Enter email") }}
+        <!--Email passes validation-->
+        {% endif %}
+      </div>
 
+      <div class="spacer"></div>
+
+      <div class="form-group">
+        {{ form.password.label(class="headings-font form-control-label") }}
+        <!--Password input box-->
+
+        {% if form.password.errors %}
+        <!--Password is invalid-->
+        {{ form.password(class="form-control is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.password.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %} {{ form.password(class="form-control textbox-border",
+        placeholder="Enter password") }}
+        <!--Password passes validation-->
+        <div id="passwordHelpBlock" class="form-text">
+          Your password must be 8-20 characters long.
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="spacer"></div>
+
+      <div class="form-group">
+        {{ form.confirm_password.label(class="headings-font form-control-label")
+        }}
+        <!--Confirm Password input box-->
+
+        {% if form.confirm_password.errors %}
+        <!--Confirm Password is invalid-->
+        {{ form.confirm_password(class="form-control is-invalid") }}
+        <div class="invalid-feedback">
+          {% for error in form.confirm_password.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %} {{ form.confirm_password(class="form-control textbox-border",
+        placeholder="Re-enter password") }}
+        <!--Confirmed password passes validation-->
+        {% endif %}
+      </div>
+    </fieldset>
+
+    <div class="spacer"></div>
+
+    <div class="form-group" align="center">
+      {{ form.submit(class="btn btn-primary btn-lg red") }}
+      <!--Submit button-->
+    </div>
+  </form>
+
+  <div class="spacer"></div>
 </section>
 {% endblock %}

@@ -12,6 +12,8 @@ from .forms import RegistrationForm
 auth = Blueprint("auth", __name__)
 
 # sign-up route
+
+
 @auth.route("/sign-up", methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
@@ -32,6 +34,8 @@ def signup():
     return render_template('sign_up.html', form=form, user=current_user)
 
 # login route
+
+
 @auth.route("/login", methods=['GET', 'POST'])
 # login function
 # returns login.html
@@ -58,6 +62,8 @@ def login():
     return render_template("login.html", user=current_user)
 
 # logout route
+
+
 @auth.route("/logout")
 @login_required
 # logout function
