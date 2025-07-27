@@ -8,7 +8,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
-  background-size: cover; 
+  background-size: cover;
   position: relative;
 }
 
@@ -17,26 +17,36 @@ footer {
 }
 
 .spacer {
-    padding: 1rem;
+  padding: 1rem;
 }
 
+/* start of navigation bar css */
 .navspace {
-    padding-top: 5rem;
+  padding-top: 5rem;
 }
 
-@media (max-width: 769px){
-    .nav-splitter {
-     font-size: 0px
-    }
- }
+@media (max-width: 769px) {
+  .nav-splitter {
+    font-size: 0px;
+  }
+}
 
- .nav-splitter {
-    padding-left: 5px;
-    padding-right: 5px;
- }
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-splitter {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 .btn-right {
-    float: right;
+  float: right;
 }
+/* end of navigation bar css */
 
 #flash-container {
   position: fixed;
@@ -50,171 +60,174 @@ footer {
   text-align: center;
 }
 
-.navbar-sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-
+/* start of colour css */
 .red {
-    background-color: #DB2955;
-    border-color: #DB2955;
-    color: white;
+  background-color: #db2955;
+  border-color: #db2955;
+  color: white;
 }
 
 .red:hover {
-    background-color: #AC042E;
-    border-color: #AC042E;
+  background-color: #ac042e;
+  border-color: #ac042e;
 }
 
 .red-nav {
-    background-color: #DB2955;
-    border-color: #DB2955;
-    color: white;
+  background-color: #db2955;
+  border-color: #db2955;
+  color: white;
 }
 
 .red-outline {
-    border-color: #DB2955;
-    color: black;
+  border-color: #db2955;
+  color: black;
 }
 
 .red-outline:hover {
-    background-color: #AC042E;
-    border-color: #AC042E;
-    color: white;
+  background-color: #ac042e;
+  border-color: #ac042e;
+  color: white;
 }
 
+.textbox-border {
+  border-color: #db2955;
+  border-width: 2px;
+}
+/* end of colour css */
+
+/* start of font css */
 .title-font {
-    font-family: "Allura";
-    font-size: 4.5rem;
-    font-weight: bold;
+  font-family: "Allura";
+  font-size: 4.5rem;
+  font-weight: bold;
 }
 
 .headings-font {
-    margin-top: 0;
-    font-family: "Merriweather Sans";
-    font-weight: bold;
-    line-height: 1;
-  }
+  margin-top: 0;
+  font-family: "Merriweather Sans";
+  font-weight: bold;
+  line-height: 1;
+}
+/* end of font css */
 
+/* start of home page css */
 .home-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("assets/img/banner.png");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/img/banner.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 5rem;
 }
 
 .home-block {
-    background-color: #DB2955;
-    border-radius: 20px;
+  background-color: #db2955;
+  border-radius: 20px;
 }
 
 .white-colour {
-    color: white;
+  color: white;
 }
 
 .home-img-circle {
-    margin-bottom: 3rem;
-    text-align: center;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .home-img-circle img {
   width: 14rem;
   height: 14rem;
-  border: 0.3rem solid #DB2955;
+  border: 0.3rem solid #db2955;
 }
+/* end of home page css */
 
-.textbox-border {
-    border-color: #DB2955;
-    border-width: 2px;
-}
-
+/* start of sing and dance page css */
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width: 100%;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0.3rem solid #DB2955;
-    border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0.3rem solid #db2955;
+  border-radius: 10px;
 }
+/* end of sing and dance page css */
 
 .sizedown {
-    height: 1.5rem;
-    width: 1.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
-        .calendar-container {
-            border-radius: 15px;
-            border-color: #DB2955;
-            max-width: 600px;
-            width: 100%;
-            border: 0.3rem solid #DB2955;
-            background-color: white;
-        }
-        .calendar-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding: 1.5rem;
-        }
-        .calendar-header h2 {
-            font-weight: 700;
-            color: #343a40;
-            margin: 0;
-        }
-        .calendar-header .btn {
-            background-color: #DB2955;
-            border-color: #DB2955;
-            color: white;
-            border-radius: 8px;
-            padding: 0.5rem 1rem;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-        .calendar-header .btn:hover {
-            background-color: #AC042E;
-            border-color: #AC042E;
-        }
-        .calendar-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            gap: 0.5rem;
-            text-align: center;
-            padding-bottom: 0.25rem;
-        }
-        .calendar-grid .day-name {
-            font-weight: 600;
-            color: #6c757d;
-            padding: 0.75rem 0;
-        }
-        .calendar-grid .day-cell {
-            padding: 0.75rem 0;
-            border-radius: 8px;
-            transition: background-color 0.2s ease;
-            cursor: pointer;
-            color: #495057;
-        }
-        .calendar-grid .day-cell:hover:not(.empty):not(.today) {
-            background-color: #e9ecef;
-        }
-        .calendar-grid .empty {
-            background-color: transparent;
-            cursor: default;
-        }
-        .calendar-grid .today {
-            background-color: #DB2955;
-            color: white;
-            font-weight: 700; 
-        }
+/* start of calendar page css */
+.calendar-container {
+  border-radius: 15px;
+  border-color: #db2955;
+  max-width: 600px;
+  width: 100%;
+  border: 0.3rem solid #db2955;
+  background-color: white;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+}
+.calendar-header h2 {
+  font-weight: 700;
+  color: #343a40;
+  margin: 0;
+}
+.calendar-header .btn {
+  background-color: #db2955;
+  border-color: #db2955;
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.calendar-header .btn:hover {
+  background-color: #ac042e;
+  border-color: #ac042e;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  padding-bottom: 0.25rem;
+}
+.calendar-grid .day-name {
+  font-weight: 600;
+  color: #6c757d;
+  padding: 0.75rem 0;
+}
+.calendar-grid .day-cell {
+  padding: 0.75rem 0;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  color: #495057;
+}
+.calendar-grid .day-cell:hover:not(.empty):not(.today) {
+  background-color: #e9ecef;
+}
+.calendar-grid .empty {
+  background-color: transparent;
+  cursor: default;
+}
+.calendar-grid .today {
+  background-color: #db2955;
+  color: white;
+  font-weight: 700;
+}
+/* end of calendar page css */
